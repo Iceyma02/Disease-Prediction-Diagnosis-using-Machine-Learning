@@ -1,7 +1,5 @@
 # 🩺 Disease Prediction & Diagnosis using Machine Learning
 
-🤖 Disease Prediction & Diagnosis using ML 🩺 Predict heart disease & diabetes risk with Random Forest & XGBoost. Interactive Streamlit app for real-time risk assessment! 📊🚀
-
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red)](https://streamlit.io)
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3.0-orange)](https://scikit-learn.org)
