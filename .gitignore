@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files
+*.csv
+*.json
+*.pkl
+*.joblib
+
+# Logs
+*.log
+logs/
+
+# Models (large files)
+models/*.pkl
+!models/__init__.py
+
+# Streamlit
+.streamlit/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Testing
+.coverage
+.pytest_cache/
