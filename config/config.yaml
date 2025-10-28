@@ -1,0 +1,147 @@
+# MedPredict AI Configuration
+# Advanced Disease Prediction & Diagnosis using Machine Learning
+
+app:
+  name: "MedPredict AI"
+  version: "1.0.0"
+  description: "Advanced Disease Prediction & Diagnosis using Machine Learning"
+  author: "Anesu Manjengwa"
+  email: "manjengwap10@gmail.com"
+
+paths:
+  data:
+    heart: "data/raw/heart.csv"
+    diabetes: "data/raw/diabetes.csv"
+  models: "models/"
+  logs: "logs/"
+
+models:
+  heart_disease:
+    file: "heart_disease_model.pkl"
+    scaler: "heart_scaler.pkl"
+    features:
+      - "age"
+      - "sex" 
+      - "cp"
+      - "trestbps"
+      - "chol"
+      - "fbs"
+      - "restecg"
+      - "thalach"
+      - "exang"
+      - "oldpeak"
+      - "slope"
+      - "ca"
+      - "thal"
+    target: "target"
+    
+  diabetes:
+    file: "diabetes_model.pkl"
+    scaler: "diabetes_scaler.pkl"
+    encoders: "diabetes_encoders.pkl"
+    features:
+      - "gender"
+      - "age"
+      - "hypertension"
+      - "heart_disease"
+      - "smoking_history"
+      - "bmi"
+      - "HbA1c_level"
+      - "blood_glucose_level"
+    target: "diabetes"
+    categorical_features:
+      - "gender"
+      - "smoking_history"
+
+training:
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+  scoring: "roc_auc"
+  
+  heart_disease:
+    models:
+      random_forest:
+        n_estimators: 100
+        max_depth: 10
+        random_state: 42
+      xgboost:
+        n_estimators: 100
+        max_depth: 6
+        learning_rate: 0.1
+        random_state: 42
+      svm:
+        C: 1.0
+        kernel: "rbf"
+        probability: true
+        random_state: 42
+        
+  diabetes:
+    models:
+      random_forest:
+        n_estimators: 100
+        max_depth: 10
+        random_state: 42
+      xgboost:
+        n_estimators: 100
+        max_depth: 6
+        learning_rate: 0.1
+        random_state: 42
+      svm:
+        C: 1.0
+        kernel: "rbf"
+        probability: true
+        random_state: 42
+
+streamlit:
+  server:
+    port: 8501
+    address: "0.0.0.0"
+    headless: true
+  theme:
+    primaryColor: "#667eea"
+    backgroundColor: "#ffffff"
+    secondaryBackgroundColor: "#f0f2f6"
+    textColor: "#262730"
+    font: "sans serif"
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/medpredict.log"
+
+risk_thresholds:
+  heart_disease:
+    low: 0.3
+    medium: 0.7
+    high: 0.5
+  diabetes:
+    low: 0.25
+    medium: 0.65
+    high: 0.5
+
+features_description:
+  heart_disease:
+    age: "Age in years"
+    sex: "Sex (0 = female, 1 = male)"
+    cp: "Chest pain type (0-3)"
+    trestbps: "Resting blood pressure (mm Hg)"
+    chol: "Serum cholesterol (mg/dl)"
+    fbs: "Fasting blood sugar > 120 mg/dl (1 = true, 0 = false)"
+    restecg: "Resting electrocardiographic results (0-2)"
+    thalach: "Maximum heart rate achieved"
+    exang: "Exercise induced angina (1 = yes, 0 = no)"
+    oldpeak: "ST depression induced by exercise"
+    slope: "Slope of the peak exercise ST segment (0-2)"
+    ca: "Number of major vessels (0-4) colored by fluoroscopy"
+    thal: "Thalassemia (0-3)"
+    
+  diabetes:
+    gender: "Gender (Female, Male, Other)"
+    age: "Age in years"
+    hypertension: "Hypertension diagnosis (0 = no, 1 = yes)"
+    heart_disease: "Heart disease diagnosis (0 = no, 1 = yes)"
+    smoking_history: "Smoking history categories"
+    bmi: "Body Mass Index"
+    HbA1c_level: "Glycated hemoglobin level"
+    blood_glucose_level: "Blood glucose level"
