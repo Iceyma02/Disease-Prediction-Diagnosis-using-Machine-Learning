@@ -1,4 +1,3 @@
-````markdown
 <div align="center">
 
 # 🏥 **MedPredict AI – Disease Prediction & Diagnosis**
