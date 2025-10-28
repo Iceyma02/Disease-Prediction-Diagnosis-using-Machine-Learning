@@ -1,1 +1,18 @@
-
+name: disease-prediction
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyter
+  - pip:
+    - xgboost
+    - streamlit
+    - plotly
+    - imbalanced-learn
