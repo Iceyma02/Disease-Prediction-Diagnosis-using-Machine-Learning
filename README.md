@@ -108,14 +108,47 @@ docker run -p 8501:8501 medpredict-ai
 
 ```
 Disease-Prediction-Diagnosis-using-Machine-Learning/
-├── data/              # Raw and processed datasets
-├── src/               # Core ML source code
-├── models/            # Trained models and scalers
-├── streamlit_app/     # Web application
-├── notebooks/         # Jupyter notebooks for EDA
-├── tests/             # Unit tests
-├── docs/              # Documentation
-└── config/            # Configuration files
+│
+├── 📊 data/
+│   │   ├── heart.csv
+│   │   └── diabetes.csv
+│
+├── 🔧 src/
+│   ├── data_processing.py
+│   ├── model_training.py
+│   └── visualizations.py
+│ 
+├── 📱 streamlit_app/
+│ ├── app.py
+│ └── assets/
+│       └── images/ (for screenshots)
+│
+├── 📚 notebooks/
+│   ├── 1.0_eda_heart_disease.ipynb
+│   ├── 1.1_eda_diabetes.ipynb
+│   ├── 2.0_model_training_heart.ipynb
+│   └── 2.1_model_training_diabetes.ipynb
+│
+├── 📄 docs/
+│   ├── project_overview.md
+│   ├── api_documentation.md
+│   ├── deployment_guide.md
+│   └── model_performance.md
+│
+├── 🧪 tests/
+│   ├── test_data_processing.py
+│   └── test_models.py
+│
+├── ⚙️ config/
+│   └── config.yaml
+│
+├── 📋 requirements.txt
+├── 📋 environment.yml
+├── 🔒 .gitignore
+├── 📖 README.md
+├── 🚀 setup.py
+├── ⚡ main.py
+└── 🐳 Dockerfile
 ```
 
 ---
