@@ -120,14 +120,11 @@ Disease-Prediction-Diagnosis-using-Machine-Learning/
 │ 
 ├── 📱 streamlit_app/
 │ ├── app.py
-│ └── assets/
-│       └── images/ (for screenshots)
+│ └── images
 │
 ├── 📚 notebooks/
 │   ├── 1.0_eda_heart_disease.ipynb
 │   ├── 1.1_eda_diabetes.ipynb
-│   ├── 2.0_model_training_heart.ipynb
-│   └── 2.1_model_training_diabetes.ipynb
 │
 ├── 📄 docs/
 │   ├── project_overview.md
