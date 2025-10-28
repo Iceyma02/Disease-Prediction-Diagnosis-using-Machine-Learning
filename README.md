@@ -1,5 +1,7 @@
-```markdown
-# 🏥 MedPredict AI - Disease Prediction & Diagnosis
+````markdown
+<div align="center">
+
+# 🏥 **MedPredict AI – Disease Prediction & Diagnosis**
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red)](https://streamlit.io)
@@ -8,92 +10,102 @@
 [![Heart Accuracy](https://img.shields.io/badge/Heart%20Disease-100%25-brightgreen)](https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning)
 [![Diabetes AUC](https://img.shields.io/badge/Diabetes-AUC%200.9784-yellow)](https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning)
 
-An advanced machine learning system for predicting heart disease and diabetes risk with exceptional accuracy. Features a professional Streamlit web application for real-time risk assessment.
+### An advanced machine learning system for predicting heart disease and diabetes risk with exceptional accuracy.  
+Features a professional **Streamlit** web app for real-time medical risk assessment.
 
-## 🎯 Key Features
+</div>
 
-- **🤖 Advanced ML Models**: Random Forest, XGBoost, SVM with perfect performance
-- **❤️ Heart Disease Prediction**: 100% accuracy on test data
-- **🩸 Diabetes Risk Assessment**: 97.08% accuracy, 0.9784 AUC score
-- **🎨 Elite Web Interface**: Professional Streamlit dashboard
-- **📊 Real-time Analytics**: Interactive risk gauges and visualizations
-- **🚀 Production Ready**: Docker support and comprehensive documentation
+---
 
-## 📸 Application Screenshots
+## 🎯 **Key Features**
 
-### Dashboard Overview
-![Dashboard](streamlit_app/assets/images/dashboard.png)
+- 🤖 **Advanced ML Models:** Random Forest, XGBoost, SVM (perfect performance)
+- ❤️ **Heart Disease Prediction:** 100% accuracy on test data
+- 🩸 **Diabetes Risk Assessment:** 97.08% accuracy, 0.9784 AUC score
+- 🎨 **Elite Web Interface:** Modern Streamlit dashboard
+- 📊 **Real-Time Analytics:** Interactive risk gauges and visualizations
+- 🚀 **Production Ready:** Docker & Conda support
 
-### Heart Disease Prediction
-![Heart Disease](streamlit_app/assets/images/heart_prediction.png)
+---
 
-### Diabetes Risk Assessment
-![Diabetes](streamlit_app/assets/images/diabetes_prediction.png)
+## 📸 **Application Screenshots**
 
-### Model Analytics
-![Analytics](streamlit_app/assets/images/analytics.png)
+| Dashboard Overview | Heart Disease Prediction |
+|:------------------:|:-----------------------:|
+| ![Dashboard](streamlit_app/assets/images/dashboard.png) | ![Heart Disease](streamlit_app/assets/images/heart_prediction.png) |
 
-## 🏆 Model Performance
+| Diabetes Risk Assessment | Model Analytics |
+|:------------------------:|:---------------:|
+| ![Diabetes](streamlit_app/assets/images/diabetes_prediction.png) | ![Analytics](streamlit_app/assets/images/analytics.png) |
 
-### Heart Disease Models
+---
+
+## 🏆 **Model Performance**
+
+### ❤️ Heart Disease Models
 | Model | Accuracy | AUC Score | Status |
-|-------|----------|-----------|---------|
+|-------|----------:|-----------:|:-------:|
 | Random Forest | 100.00% | 1.0000 | 🏆 Best |
 | XGBoost | 100.00% | 1.0000 | ⭐ Perfect |
 | SVM | 92.68% | 0.9771 | 👍 Excellent |
 
-### Diabetes Models
+### 🩸 Diabetes Models
 | Model | Accuracy | AUC Score | Status |
-|-------|----------|-----------|---------|
+|-------|----------:|-----------:|:-------:|
 | XGBoost | 97.08% | 0.9784 | 🏆 Best |
 | Random Forest | 97.00% | 0.9640 | ⭐ Excellent |
 | SVM | 96.45% | 0.9335 | 👍 Good |
 
-## 🚀 Quick Start
+---
 
-### Prerequisites
+## 🚀 **Quick Start**
+
+### 🔧 Prerequisites
 - Python 3.8+
 - pip or conda
 
-### Installation
+### 💻 Installation
 
-1. **Clone the repository**
 ```bash
+# Clone the repository
 git clone https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning.git
 cd Disease-Prediction-Diagnosis-using-Machine-Learning
-```
 
-2. **Install dependencies**
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-3. **Run the application**
-```bash
+# Run the application
 streamlit run streamlit_app/app.py
-```
+````
 
-4. **Open your browser**
+### 🌐 Open in Browser
+
 ```
 http://localhost:8501
 ```
 
-### Alternative Installation Methods
+---
 
-**Using Conda:**
+### 🧱 Alternative Installs
+
+**Conda**
+
 ```bash
 conda env create -f environment.yml
 conda activate disease-prediction
 streamlit run streamlit_app/app.py
 ```
 
-**Using Docker:**
+**Docker**
+
 ```bash
 docker build -t medpredict-ai .
 docker run -p 8501:8501 medpredict-ai
 ```
 
-## 📁 Project Structure
+---
+
+## 📁 **Project Structure**
 
 ```
 Disease-Prediction-Diagnosis-using-Machine-Learning/
@@ -107,113 +119,104 @@ Disease-Prediction-Diagnosis-using-Machine-Learning/
 └── config/            # Configuration files
 ```
 
-## 🛠️ Technical Architecture
+---
 
-### Machine Learning Pipeline
-1. **Data Preprocessing**: Handling missing values, feature encoding, scaling
-2. **Model Training**: Multiple algorithms with cross-validation
-3. **Hyperparameter Tuning**: Optimized for medical data
-4. **Model Evaluation**: Comprehensive metrics and validation
+## 🧠 **Technical Architecture**
 
-### Web Application Features
-- **Real-time Predictions**: Instant risk assessment
-- **Interactive Visualizations**: Plotly charts and gauges
-- **Professional UI**: Gradient designs and animations
-- **Responsive Design**: Mobile-friendly interface
+### 🔍 ML Pipeline
 
-## 📊 Datasets
+1. Data Preprocessing (missing values, scaling)
+2. Model Training (RandomForest, XGBoost, SVM)
+3. Hyperparameter Tuning (GridSearchCV)
+4. Model Evaluation (ROC, AUC, Accuracy)
 
-### Heart Disease Dataset
-- **Source**: UCI Machine Learning Repository
-- **Samples**: 1,025 patients
-- **Features**: 13 clinical parameters
-- **Target**: Presence of heart disease (0/1)
+### 🖥 Web App Features
 
-### Diabetes Dataset
-- **Source**: Kaggle Diabetes Prediction
-- **Samples**: 100,000 patients
-- **Features**: 8 health indicators
-- **Target**: Diabetes diagnosis (0/1)
+* Real-time predictions
+* Interactive analytics (Plotly)
+* Responsive Streamlit design
+* Deployed via Docker/Heroku
 
-## 🔧 Usage
+---
 
-### Web Interface
-1. Select prediction type (Heart Disease/Diabetes)
-2. Input patient information and medical history
-3. Get instant AI-powered risk assessment
-4. View detailed recommendations
+## 📊 **Datasets**
 
-### Programmatic Usage
-```python
-from src.prediction import DiseasePredictor
+| Dataset       | Source                                                                                     | Samples | Features | Target              |
+| ------------- | ------------------------------------------------------------------------------------------ | ------: | -------: | ------------------- |
+| Heart Disease | [UCI ML Repo](https://archive.ics.uci.edu)                                                 |   1,025 |       13 | Heart Disease (0/1) |
+| Diabetes      | [Kaggle Dataset](https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset) | 100,000 |        8 | Diabetes (0/1)      |
 
-predictor = DiseasePredictor()
-heart_result = predictor.predict_heart_disease(age=45, bp=120, cholesterol=200)
-diabetes_result = predictor.predict_diabetes(age=35, bmi=25.5, glucose_level=140)
+---
 
-print(f"Heart Disease Risk: {heart_result['probability']:.2%}")
-print(f"Diabetes Risk: {diabetes_result['probability']:.2%}")
-```
-
-## 🧪 Testing
-
-Run the test suite to verify functionality:
+## 🧪 **Testing**
 
 ```bash
 pytest tests/ -v
 pytest --cov=src tests/
 ```
 
-## 📈 Model Training
+---
 
-Retrain models with updated data:
+## 📈 **Model Training**
 
 ```bash
 python src/model_training.py
 ```
 
-## 🐳 Deployment
+---
 
-### Local Deployment
+## 🐳 **Deployment**
+
+**Local**
+
 ```bash
 streamlit run streamlit_app/app.py
 ```
 
-### Docker Deployment
+**Docker**
+
 ```bash
 docker build -t medpredict-ai .
 docker run -p 8501:8501 medpredict-ai
 ```
 
-### Cloud Deployment (Heroku)
+**Heroku**
+
 ```bash
 heroku create your-app-name
 git push heroku main
 ```
 
-## 🤝 Contributing
+---
 
-We welcome contributions! Please see our [Contributing Guidelines](docs/CONTRIBUTING.md) for details.
+## 🤝 **Contributing**
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Commit: `git commit -m 'Add amazing feature'`
+4. Push: `git push origin feature/your-feature`
 5. Open a Pull Request
 
-## 📝 License
+Read the full [Contributing Guide](docs/CONTRIBUTING.md).
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
 
-## ⚠️ Medical Disclaimer
+## 📝 **License**
 
-**Important**: This application is for educational and demonstration purposes only. It does not provide medical diagnosis, treatment, or advice. Always consult qualified healthcare professionals for medical concerns and diagnosis.
+This project is under the **MIT License**.
+See [LICENSE](LICENSE) for details.
 
-The predictions generated by this system are based on machine learning models and should not be used as a substitute for professional medical advice.
+---
 
-## 🎓 Citation
+## ⚠️ **Medical Disclaimer**
 
-If you use this project in your research or work, please cite:
+> ⚕️ This project is for **educational and demo** purposes only.
+> It does **not** provide medical advice or diagnosis.
+> Always consult healthcare professionals for actual medical concerns.
+
+---
+
+## 🎓 **Citation**
 
 ```bibtex
 @software{manjengwa2024medpredict,
@@ -226,29 +229,30 @@ If you use this project in your research or work, please cite:
 }
 ```
 
-## 👨‍💻 Author
+---
 
-**Anesu Manjengwa**
-- 📧 Email: [manjengwap10@gmail.com](mailto:manjengwap10@gmail.com)
-- 💼 LinkedIn: [Anesu Manjengwa](https://www.linkedin.com/in/anesu-manjengwa-684766247)
-- 🐙 GitHub: [Iceyma02](https://github.com/Iceyma02)
-- 🌐 Portfolio: [Coming Soon]
+## 👨‍💻 **Author**
 
-## 🙏 Acknowledgments
+**Anesu “Icey” Manjengwa**
+📧 [manjengwap10@gmail.com](mailto:manjengwap10@gmail.com)
+💼 [LinkedIn](https://www.linkedin.com/in/anesu-manjengwa-684766247)
+🐙 [GitHub](https://github.com/Iceyma02)
+🌐 Portfolio: *Coming Soon*
 
-- Kaggle for providing comprehensive datasets
-- UCI Machine Learning Repository for heart disease data
-- Streamlit team for the amazing web framework
-- Scikit-learn and XGBoost communities
-- Open-source contributors worldwide
+---
+
+## 🙏 **Acknowledgments**
+
+* Kaggle for datasets
+* UCI ML Repository
+* Streamlit & Scikit-learn teams
+* Open-source contributors ❤️
 
 ---
 
 <div align="center">
 
-**⭐ Don't forget to star this repository if you find it helpful!**
-
+⭐ **If you like this project, please give it a star!**
 *Building the future of healthcare with AI* 🚀
 
 </div>
-
