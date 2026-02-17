@@ -16,3 +16,4 @@ dependencies:
     - streamlit
     - plotly
     - imbalanced-learn
+    - joblib          # <-- add this line
