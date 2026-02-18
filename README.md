@@ -3,7 +3,7 @@
 # 🏥 **MedPredict AI – Disease Prediction & Diagnosis**
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red)](https://streamlit.io)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red)](https://disease-prediction-diagnosis-using-machine-learning-efvyui3ezm.streamlit.app/))
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.3.0-orange)](https://scikit-learn.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Heart Accuracy](https://img.shields.io/badge/Heart%20Disease-100%25-brightgreen)](https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning)
@@ -36,6 +36,8 @@ Features a professional **Streamlit** web app for real-time medical risk assessm
 | Diabetes Risk Assessment | Model Analytics |
 |:------------------------:|:---------------:|
 | ![Diabetes](streamlit_app/assets/images/diabetes_prediction.png) | ![Analytics](streamlit_app/assets/images/analytics.png) |
+
+Live project link :https://disease-prediction-diagnosis-using-machine-learning-efvyui3ezm.streamlit.app/
 
 ---
 
