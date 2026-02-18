@@ -250,10 +250,10 @@ See [LICENSE](LICENSE) for details.
 ## 🎓 **Citation**
 
 ```bibtex
-@software{manjengwa2024medpredict,
+@software{manjengwa2026medpredict,
   title = {MedPredict AI: Disease Prediction using Machine Learning},
   author = {Manjengwa, Anesu},
-  year = {2024},
+  year = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
   howpublished = {\url{https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning}}
