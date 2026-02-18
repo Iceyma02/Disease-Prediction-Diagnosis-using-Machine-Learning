@@ -35,7 +35,7 @@ Features a professional **Streamlit** web app for real-time medical risk assessm
 
 | Diabetes Risk Assessment | Model Analytics |
 |:------------------------:|:---------------:|
-| ![Diabetes](streamlit_app/assets/images/diabetes_prediction.png) | ![Analytics](streamlit_app/assets/images/analytics.png) |
+| ![Diabetes](streamlit_app/assets/images/diabetes.png) | ![Analytics](streamlit_app/assets/images/analytics.png) |
 
 Live project link :https://disease-prediction-diagnosis-using-machine-learning-efvyui3ezm.streamlit.app/
 
