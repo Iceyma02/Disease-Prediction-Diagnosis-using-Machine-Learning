@@ -31,11 +31,11 @@ Features a professional **Streamlit** web app for real-time medical risk assessm
 
 | Dashboard Overview | Heart Disease Prediction |
 |:------------------:|:-----------------------:|
-| ![Dashboard](streamlit_app/assets/images/dashboard.png) | ![Heart Disease](streamlit_app/assets/images/heart_prediction.png) |
+| ![Dashboard](https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning/blob/main/streamlit_app/assets/images/dashboard.png?raw=true) | ![Heart Disease](https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning/blob/main/streamlit_app/assets/images/heart_prediction.png?raw=true) |
 
 | Diabetes Risk Assessment | Model Analytics |
 |:------------------------:|:---------------:|
-| ![Diabetes](streamlit_app/assets/images/diabetes.png) | ![Analytics](streamlit_app/assets/images/analytics.png) |
+| ![Diabetes](https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning/blob/main/streamlit_app/assets/images/diabetes.png?raw=true) | ![Analytics](https://github.com/Iceyma02/Disease-Prediction-Diagnosis-using-Machine-Learning/blob/main/streamlit_app/assets/images/analytics.png?raw=true) |
 
 Live project link :https://disease-prediction-diagnosis-using-machine-learning-efvyui3ezm.streamlit.app/
 
