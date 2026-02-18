@@ -264,7 +264,7 @@ See [LICENSE](LICENSE) for details.
 
 ## 👨‍💻 **Author**
 
-**Anesu “Icey” Manjengwa**
+**Anesu Manjengwa**
 📧 [manjengwap10@gmail.com](mailto:manjengwap10@gmail.com)
 💼 [LinkedIn](https://www.linkedin.com/in/anesu-manjengwa-684766247)
 🐙 [GitHub](https://github.com/Iceyma02)
