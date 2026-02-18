@@ -251,6 +251,10 @@ class EliteDiseasePredictorApp:
                 st.error(f"📁 Files found: {os.listdir(self.models_dir)}")
     
     def run(self):
+        # Initialize session state for navigation if it doesn't exist
+        if 'nav_select' not in st.session_state:
+            st.session_state.nav_select = "🏠 Dashboard"
+        
         # ELITE HEADER
         st.markdown('<h1 class="main-header">🏥 MedPredict AI</h1>', unsafe_allow_html=True)
         st.markdown('<p class="sub-header">Advanced Disease Prediction & Diagnosis using Machine Learning</p>', unsafe_allow_html=True)
@@ -263,11 +267,21 @@ class EliteDiseasePredictorApp:
             </div>
             """, unsafe_allow_html=True)
             
+            # Use the session state value as the default
+            options = ["🏠 Dashboard", "❤️ Heart Disease", "🩸 Diabetes", "📊 Model Analytics", "ℹ️ About"]
+            default_index = options.index(st.session_state.nav_select) if st.session_state.nav_select in options else 0
+            
             app_mode = st.selectbox(
                 "Choose Prediction Type",
-                ["🏠 Dashboard", "❤️ Heart Disease", "🩸 Diabetes", "📊 Model Analytics", "ℹ️ About"],
-                key="nav_select"
+                options,
+                index=default_index,
+                key="nav_select_sidebar"
             )
+            
+            # Update session state when sidebar selection changes
+            if app_mode != st.session_state.nav_select:
+                st.session_state.nav_select = app_mode
+                st.rerun()
             
             st.markdown("---")
             
@@ -293,20 +307,24 @@ class EliteDiseasePredictorApp:
             </div>
             """, unsafe_allow_html=True)
         
-        # Main content based on selection
-        if app_mode == "🏠 Dashboard":
+        # Main content based on navigation
+        if st.session_state.nav_select == "🏠 Dashboard":
             self.dashboard_interface()
-        elif app_mode == "❤️ Heart Disease":
+        elif st.session_state.nav_select == "❤️ Heart Disease":
             self.heart_disease_interface()
-        elif app_mode == "🩸 Diabetes":
+        elif st.session_state.nav_select == "🩸 Diabetes":
             self.diabetes_interface()
-        elif app_mode == "📊 Model Analytics":
+        elif st.session_state.nav_select == "📊 Model Analytics":
             self.analytics_interface()
         else:
             self.about_interface()
     
     def dashboard_interface(self):
         """ELITE Dashboard with overview"""
+        # Initialize session state for navigation if it doesn't exist
+        if 'nav_select' not in st.session_state:
+            st.session_state.nav_select = "🏠 Dashboard"
+        
         st.header("📊 AI-Powered Health Analytics Dashboard")
         
         # Key Metrics
@@ -365,6 +383,7 @@ class EliteDiseasePredictorApp:
             
             if st.button("🔍 Predict Heart Disease", key="heart_btn"):
                 st.session_state.nav_select = "❤️ Heart Disease"
+                st.rerun()
         
         with col2:
             st.markdown("""
@@ -378,6 +397,7 @@ class EliteDiseasePredictorApp:
             
             if st.button("🔍 Predict Diabetes", key="diabetes_btn"):
                 st.session_state.nav_select = "🩸 Diabetes"
+                st.rerun()
         
         st.markdown("---")
         
