@@ -234,7 +234,7 @@ Read the full [Contributing Guide](docs/CONTRIBUTING.md).
 
 ## 📝 **License**
 
-This project is under the **MIT License**.
+This project is under the **Apache License 2.0**.
 See [LICENSE](LICENSE) for details.
 
 ---
