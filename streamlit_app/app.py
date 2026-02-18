@@ -191,28 +191,64 @@ st.markdown("""
 
 class EliteDiseasePredictorApp:
     def __init__(self):
-        # Load models and scalers
-        self.models_dir = r'C:\Users\Icey_m_a\Documents\Icey\Icey\School\Python\Disease-Prediction-Diagnosis-using-Machine-Learning\models'
+        # Get the project root directory dynamically
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(current_dir)  # Go up one level from streamlit_app to project root
+        self.models_dir = os.path.join(project_root, 'models')
         self.load_models()
     
     def load_models(self):
         """Load trained models and preprocessing objects"""
         try:
+            # Check if directory exists
+            if not os.path.exists(self.models_dir):
+                st.error(f"❌ Models directory not found at: {self.models_dir}")
+                st.info("📁 Please ensure the 'models' folder exists in your project root directory.")
+                return
+            
+            # List files in models directory for debugging
+            model_files = os.listdir(self.models_dir)
+            
             # Heart disease models
-            self.heart_model = joblib.load(os.path.join(self.models_dir, 'heart_disease_model.pkl'))
-            self.heart_scaler = joblib.load(os.path.join(self.models_dir, 'heart_scaler.pkl'))
+            heart_model_path = os.path.join(self.models_dir, 'heart_disease_model.pkl')
+            heart_scaler_path = os.path.join(self.models_dir, 'heart_scaler.pkl')
+            
+            if not os.path.exists(heart_model_path):
+                st.error(f"❌ Heart model not found. Expected file: heart_disease_model.pkl")
+                st.info(f"📁 Available files: {model_files}")
+                return
+                
+            self.heart_model = joblib.load(heart_model_path)
+            self.heart_scaler = joblib.load(heart_scaler_path)
             
             # Diabetes models
-            self.diabetes_model = joblib.load(os.path.join(self.models_dir, 'diabetes_model.pkl'))
-            self.diabetes_scaler = joblib.load(os.path.join(self.models_dir, 'diabetes_scaler.pkl'))
-            self.diabetes_encoders = joblib.load(os.path.join(self.models_dir, 'diabetes_encoders.pkl'))
+            diabetes_model_path = os.path.join(self.models_dir, 'diabetes_model.pkl')
+            diabetes_scaler_path = os.path.join(self.models_dir, 'diabetes_scaler.pkl')
+            diabetes_encoders_path = os.path.join(self.models_dir, 'diabetes_encoders.pkl')
             
-            # Load model results
-            self.heart_results = joblib.load(os.path.join(self.models_dir, 'heart_model_results.pkl'))
-            self.diabetes_results = joblib.load(os.path.join(self.models_dir, 'diabetes_model_results.pkl'))
+            if not os.path.exists(diabetes_model_path):
+                st.error(f"❌ Diabetes model not found. Expected file: diabetes_model.pkl")
+                st.info(f"📁 Available files: {model_files}")
+                return
+                
+            self.diabetes_model = joblib.load(diabetes_model_path)
+            self.diabetes_scaler = joblib.load(diabetes_scaler_path)
+            self.diabetes_encoders = joblib.load(diabetes_encoders_path)
+            
+            # Load model results (optional - skip if not found)
+            heart_results_path = os.path.join(self.models_dir, 'heart_model_results.pkl')
+            diabetes_results_path = os.path.join(self.models_dir, 'diabetes_model_results.pkl')
+            
+            self.heart_results = joblib.load(heart_results_path) if os.path.exists(heart_results_path) else None
+            self.diabetes_results = joblib.load(diabetes_results_path) if os.path.exists(diabetes_results_path) else None
+            
+            st.success("✅ All models loaded successfully!")
             
         except Exception as e:
             st.error(f"❌ Error loading models: {e}")
+            st.error(f"📁 Models directory: {self.models_dir}")
+            if os.path.exists(self.models_dir):
+                st.error(f"📁 Files found: {os.listdir(self.models_dir)}")
     
     def run(self):
         # ELITE HEADER
@@ -484,7 +520,7 @@ class EliteDiseasePredictorApp:
                         
                         # Advanced Risk Gauge
                         fig = go.Figure(go.Indicator(
-                            mode = "gauge+number+delta+bullet",
+                            mode = "gauge+number+delta",
                             value = result['probability'] * 100,
                             domain = {'x': [0, 1], 'y': [0, 1]},
                             title = {'text': "AI Risk Assessment Score", 'font': {'size': 20}},
@@ -506,7 +542,7 @@ class EliteDiseasePredictorApp:
                             }
                         ))
                         
-                        fig.update_layout(height=300, font={'color': "darkblue", 'family': "Arial"})
+                        fig.update_layout(height=300)
                         st.plotly_chart(fig, use_container_width=True)
                         
                         # Confidence Metrics
@@ -747,7 +783,7 @@ class EliteDiseasePredictorApp:
         
         st.markdown("---")
         
-        # FIXED: Key Risk Factors Section with Dark Mode Support
+        # Key Risk Factors Section with Dark Mode Support
         st.subheader("🔍 Key Risk Factors")
         
         col3, col4 = st.columns(2)
